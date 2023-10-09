@@ -1,0 +1,19 @@
+import random
+number_to_guess=random.randint(1,10)
+count_of_trials=1
+guess=int(input('Please enter a number between 1 and 10: '))
+while number_to_guess !=guess:
+    if count_of_trials==4:
+        break
+    elif guess<number_to_guess:
+        print('Your guess was lower than the number')
+    else:
+        print('Your guess was higher than the number')
+    guess=int(input('Please guess again: '))
+    count_of_trials+=1
+    if number_to_guess==guess:
+        print('You won!')
+    else:
+        print('Sorry! You lost')
+        print('The number you were needed to guess is: ', number_to_guess)
+    print('Game Over
